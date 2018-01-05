@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WARRIORS</title>
+
+	<style type="text/css">
+	#head{
+		margin: 0 auto;
+		background-color: black;
+		height: 200px;
+	}
+	#headtext{
+		margin: 0 auto;
+		background-color:gold;
+		height: 50px;
+	}
+	a{
+		font-size: 30px;
+		text-decoration: none;
+		color: #522a06;
+		line-height: 10px;
+	}
+	a:hover{
+		color: blue;
+		opacity:0.8;
+	}
+	#more{
+		color: blue;
+		text-decoration: none
+	}
+	#body{
+		background-image: url(pictures/WARRIORS3_mix01.jpg);
+		height: 860px;
+		margin: 50px auto;
+		margin-bottom: 0px;
+		padding-left:170px;
+		padding-right: 170px;
+		padding-top:30px;
+	}
+	#body1{
+		margin-bottom:30px;
+		float: left;
+	}
+	#bodypic1{
+		float: left;
+		margin-right: 20px;
+	}
+	#name{
+		font-size: 50px;
+		font-weight:bold;
+	}
+
+    #bodytext{
+    	text-align: center;
+    }
+    p{
+    	font-weight: bold;
+    	font-size: 17px;
+    	text-align: left;
+    }
+    #body2{
+    	float: left;
+    }
+    #nba{
+    	font-weight:bold;
+    	
+    }
+    #mark{
+    	font-weight: bold;
+    	font-size: 20px;
+    }
+    #mark:hover{
+    	text-decoration:underline;
+    }
+    li{	
+		font-size: 19px;
+		line-height:23px;
+		color:#FFFAFA;
+		font-weight: bold;
+	}
+	#foot{
+		margin:0 auto;
+		background-color: gold;
+		height: 680px;
+	}
+	#foottext{
+		font-size: 30px;
+		text-align: center;
+		font-weight: bold;
+		color: #522a06;
+  }
+
+  /*数据表单*/
+
+  #shuJu a:link,#shuJu a:visited{display:block;}
+  #shuJu li ul{display:none;}
+  #shuJu li.subMenuShow ul{display:block; }
+  
+  /*滚动*/
+  #picScroll{
+      white-space: nowrap;
+      overflow:hidden;
+      width:1323px;
+
+    }
+
+
+	</style>
+
+
+<script src="jquery-3.2.1.slim.min.js"></script>
+
+
+<script type="text/javascript">
+
+//表单
+$(function(){
+      $("#address").blur(function(){
+        if($(this).val()==""){
+          alert("用户名不能为空");
+        }
+      })  
+      $("#address").focus(function(){
+        $(this).val("");
+      })
+      $("#password1").blur(function(){
+        if($(this).val()==""){
+          alert("密码不能为空");
+        }
+      })  
+      $("#password1").focus(function(){
+        $(this).val("");
+      })
+      $("#password2").blur(function(){
+        if($(this).text()==$("#password1").text()){
+          alert("密码不一致");
+        }
+      })
+      });
+
+//图片滚动
+function changeToLeft(){
+      document.getElementById("picScroll").scrollLeft++;
+      if(document.getElementById("picScroll").scrollLeft>document.getElementById("picScroll1").offsetWidth)
+     {
+      document.getElementById("picScroll").scrollLeft=0;
+     }
+    }
+    function con(){
+      run=setInterval("changeToLeft()",10);
+    }
+window.onload=function(){
+ 
+    var run = setInterval("changeToLeft()",10);
+    
+}
+
+
+
+
+
+
+//onmouseover
+function Change(x){
+  x.style.color="gold";
+ }
+function late(){
+  var ll=setTimeout(function(){Change(document.getElementById("name"))}
+ ,2000);
+}
+
+
+ /*window.onload = function(){
+      var liNodes = document.getElementsByTagName("li");
+      for (var i=0; i<liNodes.length; i++)
+      {
+        liNodes[i].onmouseover = function(){
+          this.className = "subMenuShow";
+        }
+        liNodes[i].onmouseout = function(){
+          this.className = "";
+        }
+      }
+    }
+
+ */ 
+
+  
+</script>
+
+
+
+
+
+
+</head>
+<body>
+<div id="head">
+ <div id="headallpic">
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <img src="pictures/20170610213029_mix01.jpg"  height="175px" >
+ </div>
+
+ <div id="headtext">
+  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+
+
+<a href="index.html" id="Home">Home</a>
+ &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+
+
+
+  <img src="pictures/IMG_20161230_183659_mix01.jpg"  height="50px">
+
+  <a href="content.html" id="more">
+    Stephen</a> 
+ 
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="#" id="Thompson">
+ <img src="pictures/IMG_20161230_183659_mix02.jpg" height="50px" >
+   Thompson</a>
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  <a href="#" id=" Durant">
+  <img src="pictures/IMG_20161230_183659_mix04.jpg" height="50px">
+  Durant</a>
+
+
+ &nbsp;&nbsp;&nbsp;&nbsp;
+
+ <a href="#" id="Green">
+ <img src="pictures/IMG_20161230_183659_mix05.jpg" height="50px">
+ Green</a> 
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+ <a href="#">
+ More</a>
+
+
+ </ul>
+
+ </div>
+</div>
+
+<div id="body">
+<div id="body1">
+ <div id="bodypic1">
+   <img src="pictures/CURRY9.jpg" height="300">
+ </div>
+
+
+
+
+  <div id="bodytext">
+  <br>
+   <a id="name" onmouseover="late()">STEPHEN CURRY</a>
+   <p>Stephen curry graduated from high school and joined Davidson College.</p><p>Freshman season Curry averaging 21.5 points in the field, became the best rookie and scorer of the SEC league.</p><p>Sophomore season, curry led the Davidson team  into the NCAA Championship quarterfinals.</p><p>In the third season, curry completed the transition from attack guard to point guard who led the nation with 28.6 points per  game</p>
+  </div>
+</div>
+<div id="body2">
+ <div id="bodytext2">
+ <a id="nba">NBA Career</a>
+
+ <ul id="shuJu">
+  <li>[2009-10 Season] : Best rookie first team. <a href="#" id="mark">{Point:17.5&nbsp;&nbsp;Backboard:4.5&nbsp;&nbsp;Assists:5.9}</a></li>
+
+  <li>[2010-11 Season] : 2011 All Star Challenge champion. <a href="#" id="mark">{Point:15.6&nbsp;&nbsp;Backboard:3.9&nbsp;&nbsp;Assists:5.8}</a>
+  </li>
+
+  <li>[2011-12 Season] : <a href="#" id="mark">{Point:14.7&nbsp;&nbsp;Backboard:3.4&nbsp;&nbsp;Assists:5.3}</a></li>
+
+  <li>[2012-13 Season] : <a href="#" id="mark">{Point:22.9&nbsp;&nbsp;Backboard:4.1&nbsp;&nbsp;Assists:6.9}</a></li>
+
+  <li>[2013-14 Season] : <a href="#" id="mark">{Point:24.0&nbsp;&nbsp;Backboard:4.3&nbsp;&nbsp;Assists:8.5}</a>
+   <ul>
+    <li><a href="#">2013-14 season second team</a></li>
+    <li><a href="#"> 2014 All Star starting lineup </a>
+   
+   </ul>
+  </li>
+
+  <li>[2014-15 Season] : <a href="#" id="mark">{Point:23.8&nbsp;&nbsp;Backboard:4.3&nbsp;&nbsp;Assists:7.7}</a>
+   <ul>
+    <li>2014-15 season first team</li>
+    <li>2015 All Star starting lineup</li>
+    <li>2014-2015 Regular season MVP</li>
+    <li>2014-2015 NBA champion</li>
+    <li>2015 All Star Three point champion 
+    </li>
+
+
+   </ul>
+  </li>
+  <li>[2015-16 Season] :  <a href="#" id="mark">{Point:30.1&nbsp;&nbsp;Backboard:5.4&nbsp;&nbsp;Assists:6.7}</a>
+   <ul>
+    <li><a href="#"> 2016 All Star starting lineup</a></li>
+    <li>2015-16 season first team</li>
+    <li>2015-16 season Scoring King + steals King</li>
+    <li>2015-16 Regular season MVP </li>
+   
+   </ul>
+  </li>
+  <li>[2016-17 Season] : <a href="#" id="mark">{Point:22.8&nbsp;&nbsp;Backboard:4.5&nbsp;&nbsp;Assists:6.6}</a>
+   <ul>
+    <li>2016-17 season second team</li>
+    <li>2017 All Star starting lineup </li>
+    
+   </ul>
+  </li>
+ </ul>
+ </div>
+</div>
+</div>
+
+<div id="foot">
+<img src="pictures/CURRY1.jpg" width="1333">
+<div id="picScroll" onmouseover="clearInterval(run)" onmouseout="con()">
+<span id="picScroll1">
+<img src="pictures/d5cbd91c320e9b03c7c0ca0d5c463b57.jpg" height="150" width="441">
+<img src="pictures/d5cbd91c320e9b03c7c0ca0d5c463b57.jpg" height="150" width="441">
+<img src="pictures/d5cbd91c320e9b03c7c0ca0d5c463b57.jpg" height="150" width="441">
+</span>
+
+<span id="picScroll2">
+<img src="pictures/d5cbd91c320e9b03c7c0ca0d5c463b57.jpg" height="150" width="441">
+<img src="pictures/d5cbd91c320e9b03c7c0ca0d5c463b57.jpg" height="150" width="441">
+<img src="pictures/d5cbd91c320e9b03c7c0ca0d5c463b57.jpg" height="150" width="441">
+</span>
+</div>
+<div id="foottext">
+GOLDEN STATE &nbsp;WARRIORS
+</div>
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WARRIORES  FANSNAME:<input type="text" id="address" value=""/>&nbsp;&nbsp;&nbsp;
+    
+  PASSWORD:<input type="text" id="password1" value=""/>&nbsp;&nbsp;&nbsp;
+  
+  SURE AGAIN:<input type="text" id="password2" value=""/>&nbsp;&nbsp;&nbsp; 
+  
+  <input type="button" value="OK"/>
+
+
+
+</div>
+
+
+</body>
+</html>
